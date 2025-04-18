@@ -62,6 +62,10 @@ export default function StudioClock(props: StudioClockProps) {
     timer = removeSeconds(timer);
   }
 
+  if (hideSeconds) {
+    clock = removeSeconds(clock);
+  }
+  
   return (
     <div
       className={`studio-clock ${isMirrored ? 'mirror' : ''} ${hideRight ? 'hide-right' : ''}`}
